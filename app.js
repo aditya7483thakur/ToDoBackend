@@ -32,6 +32,10 @@ mongoDb();
 app.use("/users", userRouter);
 app.use("/tasks", taskRouter);
 
+app.get("/", (req, res) => {
+  res.send("Nice working");
+});
+
 app.use(ErrorMiddleware);
 
 app.listen(process.env.PORT, (req, res) => {
