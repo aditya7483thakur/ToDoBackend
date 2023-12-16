@@ -9,6 +9,7 @@ export const sendCookie = (user, res, message, statusCode = 200) => {
       httpOnly: true,
       sameSite: "none",
       secure: true,
+      path: "/",
     })
     .json({
       success: true,
