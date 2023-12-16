@@ -23,7 +23,7 @@ app.use(
       "https://to-do-app-react-iota.vercel.app",
     ],
     credentials: true,
-    methods: "GET,PUT,PATCH,POST,DELETE",
+    methods: "GET,PUT,POST,DELETE",
     headers: "Content-Type, Authorization",
   })
 );
