@@ -52,6 +52,7 @@ export const getMyProfile = (req, res) => {
 
 export const logout = (req, res) => {
   res.clearCookie("token").json({
+    path: "/",
     success: true,
     message: "Logged out successfully",
     sameSite: "none",
