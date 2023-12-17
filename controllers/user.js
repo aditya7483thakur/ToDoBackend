@@ -51,11 +51,14 @@ export const getMyProfile = (req, res) => {
 };
 
 export const logout = (req, res) => {
-  res.clearCookie("choken").json({
-    success: true,
-    message: "Logged out successfully",
-    sameSite: "none",
-    httpOnly: true,
-    secure: true,
-  });
+  res
+    .clearCookie("choken", {
+      sameSite: "none",
+      httpOnly: true,
+      secure: true,
+    })
+    .json({
+      success: true,
+      message: "Logged out successfully",
+    });
 };
