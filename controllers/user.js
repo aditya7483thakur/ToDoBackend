@@ -55,6 +55,7 @@ export const logout = (req, res) => {
     success: true,
     message: "Logged out successfully",
     sameSite: "none",
+    httpOnly: true,
     secure: true,
   });
 };
